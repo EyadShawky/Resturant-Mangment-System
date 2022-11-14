@@ -38,6 +38,7 @@
             this.button8 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.button10 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -151,11 +152,24 @@
             this.label1.TabIndex = 9;
             this.label1.Text = "Dashboard";
             // 
+            // button10
+            // 
+            this.button10.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.button10.Font = new System.Drawing.Font("Modern No. 20", 20.25F, System.Drawing.FontStyle.Bold);
+            this.button10.Location = new System.Drawing.Point(976, 476);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(100, 42);
+            this.button10.TabIndex = 16;
+            this.button10.Text = "Back";
+            this.button10.UseVisualStyleBackColor = false;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
+            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1088, 530);
+            this.Controls.Add(this.button10);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.button8);
@@ -188,5 +202,6 @@
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button10;
     }
 }

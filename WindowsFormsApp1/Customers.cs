@@ -129,9 +129,52 @@ namespace WindowsFormsApp1
             this.Close();
             Dashboard back = new Dashboard();
             back.Show();
+            this.Hide();
         }
 
         private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click_1(object sender, EventArgs e)
+        {
+
+
+
+                try
+                {
+                    conn.Open();
+                    cmd = new SqlCommand("SELECT * FROM restaurant_schema.CUSTOMERS WHERE (ID = '" + textBox5.Text + "')", conn);
+                    SqlDataReader reader;
+                    reader = cmd.ExecuteReader();
+                    while (reader.Read())
+                    {
+                        textBox1.Text = reader.GetValue(0).ToString();
+                        textBox2.Text = reader.GetValue(1).ToString();
+                        textBox3.Text = reader.GetValue(2).ToString();
+                        textBox4.Text = reader.GetValue(3).ToString();
+                    }
+                    conn.Close();
+                    DisplayData();
+                }
+                catch(Exception ex)
+                {
+                    MessageBox.Show("Error in searching" + ex);
+                }
+                finally
+                {
+                    conn.Close();
+                }
+            
+        }
+
+        private void textBox5_TextChanged(object sender, EventArgs e)
         {
 
         }

@@ -39,10 +39,16 @@ namespace WindowsFormsApp1
         {
             string username = textBox1.Text;
             string password = textBox2.Text;
-            if (username == "Eyad" && password == "8545")
+            if (username == "Admin" && password == "1234")
             {
                 Dashboard db = new Dashboard();
                 db.Show();
+                this.Hide();
+            }
+            else if (username == "Employee" && password == "1234")
+            {
+                Dashboard_Employee dbee = new Dashboard_Employee();
+                dbee.Show();
                 this.Hide();
             }
             else if (username == "" || password == "")

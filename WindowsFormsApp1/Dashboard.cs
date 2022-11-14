@@ -97,6 +97,14 @@ namespace WindowsFormsApp1
             Customers cu = new Customers();
             cu.Show();
         }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            LogIn back = new LogIn();
+            back.Show();
+            this.Hide();
+        }
     }
 }
 
