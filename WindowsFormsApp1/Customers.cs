@@ -72,7 +72,7 @@ namespace WindowsFormsApp1
         {
             if (textBox2.Text != "" && textBox3.Text != "")
             {
-                cmd = new SqlCommand("UPDATE restaurant_schema.CUSTOMERS SET FIRST_NAME = '" + textBox2.Text + "' , LAST_NAME = '" + textBox3.Text + "' , PHONE_NO='"+ textBox3.Text + "' WHERE ID = '" + textBox1.Text + "' ", conn);
+                cmd = new SqlCommand("UPDATE restaurant_schema.CUSTOMERS SET FIRST_NAME = '" + textBox2.Text + "' , LAST_NAME = '" + textBox3.Text + "' , PHONE_NO='"+ textBox4.Text + "' WHERE ID = '" + textBox1.Text + "' ", conn);
                 conn.Open();
                 cmd.ExecuteNonQuery();
                 conn.Close();
@@ -129,6 +129,11 @@ namespace WindowsFormsApp1
             this.Close();
             Dashboard back = new Dashboard();
             back.Show();
+        }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
