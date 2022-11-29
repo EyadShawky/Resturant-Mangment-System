@@ -94,11 +94,16 @@ namespace WindowsFormsApp1
 
         private void button1_Click_2(object sender, EventArgs e)
         {
+            
+        }
+
+        private void button1_Click_3(object sender, EventArgs e)
+        {
             Customers cu = new Customers();
             cu.Show();
         }
 
-        private void button10_Click(object sender, EventArgs e)
+        private void button10_Click_1(object sender, EventArgs e)
         {
             this.Close();
             LogIn back = new LogIn();

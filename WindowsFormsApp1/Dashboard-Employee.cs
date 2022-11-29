@@ -29,8 +29,21 @@ namespace WindowsFormsApp1
 
         private void button6_Click(object sender, EventArgs e)
         {
+           
+        }
+
+        private void button6_Click_1(object sender, EventArgs e)
+        {
             Customers_Employee ce = new Customers_Employee();
             ce.Show();
+            this.Hide();
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Dashboard back = new Dashboard();
+            back.Show();
             this.Hide();
         }
     }

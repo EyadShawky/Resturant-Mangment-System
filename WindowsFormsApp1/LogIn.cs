@@ -35,7 +35,23 @@ namespace WindowsFormsApp1
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+        private void clearData()
+        {
+            textBox1.Text = " ";
+            textBox2.Text = " ";
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
         {
             string username = textBox1.Text;
             string password = textBox2.Text;
@@ -60,21 +76,6 @@ namespace WindowsFormsApp1
                 MessageBox.Show("Please enter a valid data");
             }
             clearData();
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-        private void clearData()
-        {
-            textBox1.Text = " ";
-            textBox2.Text = " ";
         }
     }
 }

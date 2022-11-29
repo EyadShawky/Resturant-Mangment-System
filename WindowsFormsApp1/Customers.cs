@@ -33,21 +33,6 @@ namespace WindowsFormsApp1
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            if (textBox2.Text != "" && textBox3.Text != "")
-            {
-                cmd = new SqlCommand("INSERT INTO restaurant_schema.CUSTOMERS VAlUES ('"+textBox2.Text+"' , '"+textBox3.Text+"' , '"+textBox4.Text+"')" , conn );
-                conn.Open();
-                cmd.ExecuteNonQuery();
-                conn.Close();
-                MessageBox.Show("Recorde Inserted Successfully");
-                DisplayData();
-                clearData();
-            }
-
-        }
-
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
@@ -68,33 +53,6 @@ namespace WindowsFormsApp1
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            if (textBox2.Text != "" && textBox3.Text != "")
-            {
-                cmd = new SqlCommand("UPDATE restaurant_schema.CUSTOMERS SET FIRST_NAME = '" + textBox2.Text + "' , LAST_NAME = '" + textBox3.Text + "' , PHONE_NO='"+ textBox4.Text + "' WHERE ID = '" + textBox1.Text + "' ", conn);
-                conn.Open();
-                cmd.ExecuteNonQuery();
-                conn.Close();
-                MessageBox.Show("Recorde Updates Successfully");
-                DisplayData();
-                clearData();
-            }
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            if (textBox1.Text != "")
-            {
-                cmd = new SqlCommand("DELETE restaurant_schema.CUSTOMERS WHERE ID = '" + textBox1.Text + "' ", conn);
-                conn.Open();
-                cmd.ExecuteNonQuery();
-                conn.Close();
-                MessageBox.Show("Recorde Deleted Successfully");
-                DisplayData();
-                clearData();
-            }
-        }
 
         private void clearData()
         {
@@ -124,13 +82,6 @@ namespace WindowsFormsApp1
 
         }
 
-        private void button5_Click(object sender, EventArgs e)
-        {
-            this.Close();
-            Dashboard back = new Dashboard();
-            back.Show();
-            this.Hide();
-        }
 
         private void textBox4_TextChanged(object sender, EventArgs e)
         {
@@ -142,41 +93,95 @@ namespace WindowsFormsApp1
 
         }
 
-        private void button4_Click_1(object sender, EventArgs e)
-        {
-
-
-
-                try
-                {
-                    conn.Open();
-                    cmd = new SqlCommand("SELECT * FROM restaurant_schema.CUSTOMERS WHERE (ID = '" + textBox5.Text + "')", conn);
-                    SqlDataReader reader;
-                    reader = cmd.ExecuteReader();
-                    while (reader.Read())
-                    {
-                        textBox1.Text = reader.GetValue(0).ToString();
-                        textBox2.Text = reader.GetValue(1).ToString();
-                        textBox3.Text = reader.GetValue(2).ToString();
-                        textBox4.Text = reader.GetValue(3).ToString();
-                    }
-                    conn.Close();
-                    DisplayData();
-                }
-                catch(Exception ex)
-                {
-                    MessageBox.Show("Error in searching" + ex);
-                }
-                finally
-                {
-                    conn.Close();
-                }
-            
-        }
 
         private void textBox5_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            if (textBox2.Text != "" && textBox3.Text != "")
+            {
+                cmd = new SqlCommand("INSERT INTO restaurant_schema.CUSTOMERS VAlUES ('" + textBox2.Text + "' , '" + textBox3.Text + "' , '" + textBox4.Text + "')", conn);
+                conn.Open();
+                cmd.ExecuteNonQuery();
+                conn.Close();
+                MessageBox.Show("Recorde Inserted Successfully");
+                DisplayData();
+                clearData();
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (textBox2.Text != "" && textBox3.Text != "")
+            {
+                cmd = new SqlCommand("UPDATE restaurant_schema.CUSTOMERS SET FIRST_NAME = '" + textBox2.Text + "' , LAST_NAME = '" + textBox3.Text + "' , PHONE_NO='" + textBox4.Text + "' WHERE ID = '" + textBox1.Text + "' ", conn);
+                conn.Open();
+                cmd.ExecuteNonQuery();
+                conn.Close();
+                MessageBox.Show("Recorde Updates Successfully");
+                DisplayData();
+                clearData();
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (textBox1.Text != "")
+            {
+                cmd = new SqlCommand("DELETE restaurant_schema.CUSTOMERS WHERE ID = '" + textBox1.Text + "' ", conn);
+                conn.Open();
+                cmd.ExecuteNonQuery();
+                conn.Close();
+                MessageBox.Show("Recorde Deleted Successfully");
+                DisplayData();
+                clearData();
+            }
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            DisplayData();
+        }
+
+        private void button4_Click_2(object sender, EventArgs e)
+        {
+
+            try
+            {
+                conn.Open();
+                cmd = new SqlCommand("SELECT * FROM restaurant_schema.CUSTOMERS WHERE (ID = '" + textBox5.Text + "')", conn);
+                SqlDataReader reader;
+                reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    textBox1.Text = reader.GetValue(0).ToString();
+                    textBox2.Text = reader.GetValue(1).ToString();
+                    textBox3.Text = reader.GetValue(2).ToString();
+                    textBox4.Text = reader.GetValue(3).ToString();
+                }
+                conn.Close();
+                DisplayData();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error in searching" + ex);
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Dashboard back = new Dashboard();
+            back.Show();
+            this.Hide();
         }
     }
 }

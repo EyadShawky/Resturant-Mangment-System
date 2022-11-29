@@ -24,14 +24,28 @@ namespace WindowsFormsApp1
 
         private void clearData()
         {
-            textBox1.Text = " ";
             textBox2.Text = " ";
             textBox3.Text = " ";
             textBox4.Text = " ";
         }
 
 
-        private void button1_Click(object sender, EventArgs e)
+       
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Dashboard_Employee dbe = new Dashboard_Employee();
+            dbe.Show();
+            this.Hide();
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
         {
             if (textBox2.Text != "" && textBox3.Text != "")
             {
@@ -44,16 +58,16 @@ namespace WindowsFormsApp1
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void textBox2_TextChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        private void button2_Click_1(object sender, EventArgs e)
         {
             this.Close();
-            Dashboard_Employee dbe = new Dashboard_Employee();
-            dbe.Show();
+            LogIn back = new LogIn();
+            back.Show();
             this.Hide();
         }
     }
