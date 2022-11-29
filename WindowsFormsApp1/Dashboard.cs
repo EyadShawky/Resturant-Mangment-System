@@ -110,6 +110,13 @@ namespace WindowsFormsApp1
             back.Show();
             this.Hide();
         }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            Role ro = new Role();
+            ro.Show();
+            this.Close();
+        }
     }
 }
 
