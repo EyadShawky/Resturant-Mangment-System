@@ -32,11 +32,6 @@ namespace WindowsFormsApp1
 
        
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void button5_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -45,7 +40,21 @@ namespace WindowsFormsApp1
             this.Hide();
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
+        
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+            LogIn back = new LogIn();
+            back.Show();
+            this.Hide();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
         {
             if (textBox2.Text != "" && textBox3.Text != "")
             {
@@ -58,15 +67,10 @@ namespace WindowsFormsApp1
             }
         }
 
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button2_Click_1(object sender, EventArgs e)
+        private void button5_Click_1(object sender, EventArgs e)
         {
             this.Close();
-            LogIn back = new LogIn();
+            Dashboard back = new Dashboard();
             back.Show();
             this.Hide();
         }

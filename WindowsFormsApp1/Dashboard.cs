@@ -101,6 +101,8 @@ namespace WindowsFormsApp1
         {
             Customers cu = new Customers();
             cu.Show();
+            this.Hide();
+            this.Close();
         }
 
         private void button10_Click_1(object sender, EventArgs e)
@@ -109,6 +111,7 @@ namespace WindowsFormsApp1
             LogIn back = new LogIn();
             back.Show();
             this.Hide();
+            this.Close();
         }
 
         private void button8_Click(object sender, EventArgs e)

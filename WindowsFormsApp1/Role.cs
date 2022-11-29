@@ -23,47 +23,6 @@ namespace WindowsFormsApp1
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            if (textBox2.Text != "")
-            {
-                cmd = new SqlCommand("INSERT INTO restaurant_schema.ROLE VAlUES ('" + textBox2.Text + "')", conn);
-                conn.Open();
-                cmd.ExecuteNonQuery();
-                conn.Close();
-                MessageBox.Show("Recorde Inserted Successfully");
-                DisplayData();
-                clearData();
-            }
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            if (textBox2.Text != "" && textBox2.Text != "")
-            {
-                cmd = new SqlCommand("UPDATE restaurant_schema.ROLE SET ROLE_NAME = '" + textBox2.Text + "' WHERE ID = '" + textBox1.Text + "' ", conn);
-                conn.Open();
-                cmd.ExecuteNonQuery();
-                conn.Close();
-                MessageBox.Show("Recorde Updates Successfully");
-                DisplayData();
-                clearData();
-            }
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            if (textBox1.Text != "")
-            {
-                cmd = new SqlCommand("DELETE restaurant_schema.ROLE WHERE ID = '" + textBox1.Text + "' ", conn);
-                conn.Open();
-                cmd.ExecuteNonQuery();
-                conn.Close();
-                MessageBox.Show("Recorde Deleted Successfully");
-                DisplayData();
-                clearData();
-            }
-        }
 
         private void DisplayData()
         {
@@ -81,12 +40,58 @@ namespace WindowsFormsApp1
             textBox2.Text = " ";
         }
 
+
+
+
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            if (textBox2.Text != "")
+            {
+                cmd = new SqlCommand("INSERT INTO restaurant_schema.ROLE VAlUES ('" + textBox2.Text + "')", conn);
+                conn.Open();
+                cmd.ExecuteNonQuery();
+                conn.Close();
+                MessageBox.Show("Recorde Inserted Successfully");
+                DisplayData();
+                clearData();
+            }
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            if (textBox2.Text != "" && textBox2.Text != "")
+            {
+                cmd = new SqlCommand("UPDATE restaurant_schema.ROLE SET ROLE_NAME = '" + textBox2.Text + "' WHERE ID = '" + textBox1.Text + "' ", conn);
+                conn.Open();
+                cmd.ExecuteNonQuery();
+                conn.Close();
+                MessageBox.Show("Recorde Updates Successfully");
+                DisplayData();
+                clearData();
+            }
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            if (textBox1.Text != "")
+            {
+                cmd = new SqlCommand("DELETE restaurant_schema.ROLE WHERE ID = '" + textBox1.Text + "' ", conn);
+                conn.Open();
+                cmd.ExecuteNonQuery();
+                conn.Close();
+                MessageBox.Show("Recorde Deleted Successfully");
+                DisplayData();
+                clearData();
+            }
+        }
+
         private void button6_Click(object sender, EventArgs e)
         {
             DisplayData();
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void button4_Click_1(object sender, EventArgs e)
         {
             try
             {
@@ -112,7 +117,7 @@ namespace WindowsFormsApp1
             }
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        private void button5_Click_1(object sender, EventArgs e)
         {
             this.Close();
             Dashboard back = new Dashboard();
