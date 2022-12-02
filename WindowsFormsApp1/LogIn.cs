@@ -121,5 +121,12 @@ namespace WindowsFormsApp1
         {
 
         }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            SignUp sign = new SignUp();
+            sign.Show();
+            this.Hide();
+        }
     }
 }
