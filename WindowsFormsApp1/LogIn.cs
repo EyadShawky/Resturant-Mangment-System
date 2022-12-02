@@ -62,5 +62,17 @@ namespace WindowsFormsApp1
                 MessageBox.Show("Error while login please check from your data");
             }
         }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            SignUp s = new SignUp();
+            s.Show();
+            this.Hide();
+        }
     }
 }
