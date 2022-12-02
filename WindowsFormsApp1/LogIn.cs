@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -53,29 +54,37 @@ namespace WindowsFormsApp1
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            string username = textBox1.Text;
-            string password = textBox2.Text;
-            if (username == "Admin" && password == "1234")
+            SqlConnection conn = new SqlConnection("Data Source=EYAD\\SQLEXPRESS;Initial Catalog=Restaurant_DB;Integrated Security=True;");
+            SqlCommand cmd = new SqlCommand("select * from restaurant_schema.ACCOUNT WHERE USERNAME = '" + textBox1.Text + "' AND PASSWORD = '" + textBox2.Text + "' ", conn);
+            SqlDataAdapter sda = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            string cmbItemValue = comboBox1.SelectedItem.ToString();
+            if(dt.Rows.Count > 0)
             {
-                Dashboard db = new Dashboard();
-                db.Show();
-                this.Hide();
-            }
-            else if (username == "Employee" && password == "1234")
-            {
-                Dashboard_Employee dbee = new Dashboard_Employee();
-                dbee.Show();
-                this.Hide();
-            }
-            else if (username == "" || password == "")
-            {
-                MessageBox.Show("Please enter Username && password");
+                for(int i = 0; i < dt.Rows.Count; i++)
+                {
+                    if (dt.Rows[i]["ROLE_NAME"].ToString()== cmbItemValue )
+                    {
+                        if(comboBox1.SelectedIndex == 0)
+                        {
+                            Dashboard form = new Dashboard();
+                            form.Show();
+                            this.Hide();
+                        }
+                        else
+                        {
+                            Dashboard_Employee form2 = new Dashboard_Employee();
+                            form2.Show();
+                            this.Hide();
+                        }
+                    }
+                }
             }
             else
             {
-                MessageBox.Show("Please enter a valid data");
+                MessageBox.Show("The data is wrong");
             }
-            clearData();
         }
 
         private void textBox1_TextChanged_1(object sender, EventArgs e)
@@ -99,6 +108,16 @@ namespace WindowsFormsApp1
         }
 
         private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
