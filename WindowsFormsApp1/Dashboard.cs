@@ -108,7 +108,7 @@ namespace WindowsFormsApp1
         private void button10_Click_1(object sender, EventArgs e)
         {
             this.Close();
-            LogIn back = new LogIn();
+            Login back = new Login();
             back.Show();
             this.Hide();
             this.Close();
