@@ -74,5 +74,10 @@ namespace WindowsFormsApp1
             back.Show();
             this.Hide();
         }
+
+        private void Customers_Employee_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

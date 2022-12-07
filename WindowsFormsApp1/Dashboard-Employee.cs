@@ -46,5 +46,12 @@ namespace WindowsFormsApp1
             back.Show();
             this.Hide();
         }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            Order_Employee order = new Order_Employee();
+            order.Show();
+            this.Hide();
+        }
     }
 }

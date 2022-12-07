@@ -120,6 +120,13 @@ namespace WindowsFormsApp1
             ro.Show();
             this.Close();
         }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            Order order = new Order();  
+            order.Show();
+            this.Hide();
+        }
     }
 }
 
