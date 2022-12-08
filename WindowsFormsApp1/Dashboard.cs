@@ -134,6 +134,13 @@ namespace WindowsFormsApp1
             table.Show();
             this.Hide();
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Employee emp = new Employee();  
+            emp.Show();
+            this.Hide();
+        }
     }
 }
 
