@@ -71,6 +71,7 @@
             this.button5.TabIndex = 24;
             this.button5.Text = "Booking";
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button6
             // 
@@ -137,6 +138,7 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Name = "Dashboard_Employee";
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dashboard_Employee";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

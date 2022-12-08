@@ -46,6 +46,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Booking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Booking.Designer.cs">
+      <DependentUpon>Booking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Booking_employee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Booking_employee.Designer.cs">
+      <DependentUpon>Booking_employee.cs</DependentUpon>
+    </Compile>
     <Compile Include="Customers-Employee.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -126,6 +138,12 @@
     <Compile Include="Table_Employee.Designer.cs">
       <DependentUpon>Table_Employee.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Booking.resx">
+      <DependentUpon>Booking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Booking_employee.resx">
+      <DependentUpon>Booking_employee.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Customers-Employee.resx">
       <DependentUpon>Customers-Employee.cs</DependentUpon>
     </EmbeddedResource>
@@ -217,6 +235,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\iftar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\booking.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -184,6 +184,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.button5);
             this.Name = "Order_Employee";
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Order_Employee";
             this.Load += new System.EventHandler(this.Order_Employee_Load);

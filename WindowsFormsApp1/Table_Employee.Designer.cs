@@ -172,6 +172,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Name = "Table_Employee";
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Table_Employee";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

@@ -41,7 +41,7 @@ namespace WindowsFormsApp1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            SqlCommand cmd = new SqlCommand("INSERT INTO restaurant_schema.Employee (FIRST_NAME , LAST_NAME , Email , PHONE , SALARY , BIRTH_DATE , MANGER_ID , SEX , DEPARTMENT_ID) VAlUES ( '" + textBox2.Text + "' ,'" + textBox3.Text + "',  '" + textBox4.Text + "', '" + textBox5.Text + "','" + textBox10.Text + "','" + textBox9.Text + "','" + textBox8.Text + "','" + textBox7.Text + "','" + textBox6.Text + "')", conn);
+            SqlCommand cmd = new SqlCommand("INSERT INTO restaurant_schema.Employee (FIRST_NAME , LAST_NAME , Email , PHONE , SALARY , BIRTH_DATE , MANGER_ID , SEX , DEPARTMENT_ID) VAlUES ( '" + textBox2.Text + "' ,'" + textBox3.Text + "',  '" + textBox4.Text + "', '" + textBox5.Text + "','" + textBox10.Text + "','" + textBox9.Text + "','" + textBox8.Text + "','" + comboBox1.Text + "','" + textBox6.Text + "')", conn);
             conn.Open();
             cmd.ExecuteNonQuery();
             conn.Close();
@@ -76,7 +76,7 @@ namespace WindowsFormsApp1
                     textBox10.Text = reader.GetValue(7).ToString();
                     textBox9.Text = reader.GetValue(6).ToString();
                     textBox8.Text = reader.GetValue(9).ToString();
-                    textBox7.Text = reader.GetValue(5).ToString();
+                    comboBox1.Text = reader.GetValue(5).ToString();
                     textBox6.Text = reader.GetValue(8).ToString();
                 }
                 conn.Close();
@@ -96,7 +96,7 @@ namespace WindowsFormsApp1
         {
             if (textBox8.Text != "" && textBox6.Text != "" && textBox1.Text != "")
             {
-                SqlCommand cmd = new SqlCommand("UPDATE restaurant_schema.EMPLOYEE SET FIRST_NAME = '" + textBox2.Text + "' ,LAST_NAME = '" + textBox3.Text + "', Email = '" + textBox4.Text + "',PHONE= '" + textBox5.Text + "',SEX = '" + textBox7.Text + "', BIRTH_DATE ='" + textBox9.Text + "',SALARY= '" + textBox10.Text + "',DEPARTMENT_ID='" + textBox6.Text + "',MANGER_ID ='" + textBox8.Text + "' WHERE ID = '" + textBox1.Text + "' ", conn);
+                SqlCommand cmd = new SqlCommand("UPDATE restaurant_schema.EMPLOYEE SET FIRST_NAME = '" + textBox2.Text + "' ,LAST_NAME = '" + textBox3.Text + "', Email = '" + textBox4.Text + "',PHONE= '" + textBox5.Text + "',SEX = '" + comboBox1.Text + "', BIRTH_DATE ='" + textBox9.Text + "',SALARY= '" + textBox10.Text + "',DEPARTMENT_ID='" + textBox6.Text + "',MANGER_ID ='" + textBox8.Text + "' WHERE ID = '" + textBox1.Text + "' ", conn);
                 conn.Open();
                 cmd.ExecuteNonQuery();
                 conn.Close();

@@ -45,7 +45,7 @@
             // 
             this.pictureBox1.Image = global::WindowsFormsApp1.Properties.Resources.customer;
             this.pictureBox1.Location = new System.Drawing.Point(104, 181);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(75, 60);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -57,7 +57,7 @@
             this.button5.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.button5.Font = new System.Drawing.Font("Modern No. 20", 20.25F, System.Drawing.FontStyle.Bold);
             this.button5.Location = new System.Drawing.Point(844, 516);
-            this.button5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button5.Margin = new System.Windows.Forms.Padding(2);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(129, 34);
             this.button5.TabIndex = 52;
@@ -71,7 +71,7 @@
             this.button1.Font = new System.Drawing.Font("Modern No. 20", 20.25F, System.Drawing.FontStyle.Bold);
             this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button1.Location = new System.Drawing.Point(635, 207);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(189, 34);
             this.button1.TabIndex = 48;
@@ -83,7 +83,7 @@
             // 
             this.textBox4.BackColor = System.Drawing.Color.LightSteelBlue;
             this.textBox4.Location = new System.Drawing.Point(402, 250);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox4.Margin = new System.Windows.Forms.Padding(2);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(221, 20);
             this.textBox4.TabIndex = 47;
@@ -92,7 +92,7 @@
             // 
             this.textBox3.BackColor = System.Drawing.Color.LightSteelBlue;
             this.textBox3.Location = new System.Drawing.Point(402, 213);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(2);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(221, 20);
             this.textBox3.TabIndex = 46;
@@ -101,7 +101,7 @@
             // 
             this.textBox2.BackColor = System.Drawing.Color.LightSteelBlue;
             this.textBox2.Location = new System.Drawing.Point(402, 172);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(221, 20);
             this.textBox2.TabIndex = 45;
@@ -166,6 +166,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Name = "Customers_Employee";
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Customers_Employee";
             this.Load += new System.EventHandler(this.Customers_Employee_Load);

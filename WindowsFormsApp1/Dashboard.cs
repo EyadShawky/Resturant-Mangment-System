@@ -148,6 +148,13 @@ namespace WindowsFormsApp1
             meals.Show();
             this.Hide();
         }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            Booking booking = new Booking();    
+            booking.Show();
+            this.Hide();
+        }
     }
 }
 
