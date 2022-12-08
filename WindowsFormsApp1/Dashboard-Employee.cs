@@ -53,5 +53,12 @@ namespace WindowsFormsApp1
             order.Show();
             this.Hide();
         }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            Table_Employee table = new Table_Employee();    
+            table.Show();
+            this.Hide();
+        }
     }
 }

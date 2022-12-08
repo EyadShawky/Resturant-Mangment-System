@@ -102,6 +102,18 @@
     <Compile Include="SignUp.Designer.cs">
       <DependentUpon>SignUp.cs</DependentUpon>
     </Compile>
+    <Compile Include="Table.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Table.Designer.cs">
+      <DependentUpon>Table.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Table_Employee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Table_Employee.Designer.cs">
+      <DependentUpon>Table_Employee.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Customers-Employee.resx">
       <DependentUpon>Customers-Employee.cs</DependentUpon>
     </EmbeddedResource>
@@ -139,6 +151,12 @@
     <EmbeddedResource Include="SignUp.resx">
       <DependentUpon>SignUp.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Table.resx">
+      <DependentUpon>Table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Table_Employee.resx">
+      <DependentUpon>Table_Employee.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -172,6 +190,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\cargo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dining-table.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

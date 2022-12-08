@@ -127,6 +127,13 @@ namespace WindowsFormsApp1
             order.Show();
             this.Hide();
         }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            Table table = new Table();
+            table.Show();
+            this.Hide();
+        }
     }
 }
 
