@@ -61,5 +61,13 @@ namespace WindowsFormsApp1
         {
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Dashboard_Employee back = new Dashboard_Employee();
+            back.Show();
+            this.Hide();
+        }
     }
 }

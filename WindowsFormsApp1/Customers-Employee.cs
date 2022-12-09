@@ -70,7 +70,7 @@ namespace WindowsFormsApp1
         private void button5_Click_1(object sender, EventArgs e)
         {
             this.Close();
-            Dashboard back = new Dashboard();
+            Dashboard_Employee back = new Dashboard_Employee();
             back.Show();
             this.Hide();
         }

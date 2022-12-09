@@ -54,7 +54,7 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(463, 121);
+            this.groupBox1.Location = new System.Drawing.Point(470, 121);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(388, 304);
             this.groupBox1.TabIndex = 0;
@@ -149,9 +149,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::WindowsFormsApp1.Properties.Resources.searching_codes;
-            this.pictureBox1.Location = new System.Drawing.Point(133, 90);
+            this.pictureBox1.Location = new System.Drawing.Point(47, 89);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(325, 375);
+            this.pictureBox1.Size = new System.Drawing.Size(373, 375);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;

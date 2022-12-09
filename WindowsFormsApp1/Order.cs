@@ -26,7 +26,7 @@ namespace WindowsFormsApp1
         {
             if (textBox1.Text != "" && comboBox1.Text != "" && textBox6.Text != "")
             {
-                cmd = new SqlCommand(" INSERT INTO restaurant_schema.ORDER_DATA (MEALS_ID , ORDER_STATUS , EMPLOYEE_ID , CUSTOMER_ID) VAlUES ('" + textBox1.Text + "' , '" + comboBox1.Text + "' , '" + textBox6.Text + "' , '"+ textBox3 + "')", conn);
+                cmd = new SqlCommand(" INSERT INTO restaurant_schema.ORDER_DATA (MEALS_ID , ORDER_STATUS , EMPLOYEE_ID , CUSTOMER_ID) VAlUES ('" + textBox1.Text + "' , '" + comboBox1.Text + "' , '" + textBox6.Text + "')", conn);
                 conn.Open();
                 cmd.ExecuteNonQuery();
                 conn.Close();
@@ -76,7 +76,7 @@ namespace WindowsFormsApp1
         {
             if (textBox2.Text != "")
             {
-                cmd = new SqlCommand("UPDATE restaurant_schema.ORDER_DATA SET MEALS_ID = '" + textBox1.Text + "' , CUSTOMER_ID = '" + textBox3.Text + "' , ORDER_STATUS='" + comboBox1.Text + "' WHERE ID = '" + textBox2.Text + "' ", conn);
+                cmd = new SqlCommand("UPDATE restaurant_schema.ORDER_DATA SET MEALS_ID = '" + textBox1.Text + "' , ORDER_STATUS='" + comboBox1.Text + "' WHERE ID = '" + textBox2.Text + "' ", conn);
                 conn.Open();
                 cmd.ExecuteNonQuery();
                 conn.Close();
@@ -122,9 +122,8 @@ namespace WindowsFormsApp1
                 {
                     textBox2.Text = reader.GetValue(0).ToString();
                     textBox1.Text = reader.GetValue(1).ToString();
-                    comboBox1.Text = reader.GetValue(2).ToString();
-                    textBox6.Text = reader.GetValue(3).ToString();
-                    textBox3.Text = reader.GetValue(3).ToString();
+                    comboBox1.Text = reader.GetValue(3).ToString();
+                    textBox6.Text = reader.GetValue(2).ToString();
 
                 }
                 conn.Close();

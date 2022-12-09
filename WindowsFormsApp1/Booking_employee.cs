@@ -19,7 +19,6 @@ namespace WindowsFormsApp1
         private SqlDataAdapter adapt;
         private void clearData()
         {
-            textBox1.Text = " ";
             textBox2.Text = " ";
             textBox3.Text = " ";
         }
@@ -55,6 +54,14 @@ namespace WindowsFormsApp1
         private void button6_Click(object sender, EventArgs e)
         {
             DisplayData();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Dashboard_Employee back = new Dashboard_Employee();
+            back.Show();
+            this.Hide();
         }
     }
 }

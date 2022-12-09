@@ -42,7 +42,7 @@ namespace WindowsFormsApp1
         private void button10_Click(object sender, EventArgs e)
         {
             this.Close();
-            Dashboard back = new Dashboard();
+            Login back = new Login();
             back.Show();
             this.Hide();
         }

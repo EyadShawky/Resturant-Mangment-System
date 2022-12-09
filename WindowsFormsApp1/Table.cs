@@ -115,5 +115,13 @@ namespace WindowsFormsApp1
                 conn.Close();
             }
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Dashboard back = new Dashboard();
+            back.Show();
+            this.Hide();
+        }
     }
 }

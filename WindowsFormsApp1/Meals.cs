@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace WindowsFormsApp1
 {
@@ -94,7 +95,7 @@ namespace WindowsFormsApp1
             try
             {
                 con.Open();
-                cmd = new SqlCommand("SELECT * restaurant_schema.MEALS WHERE ID = '" + textBox1.Text + "'", con);
+                SqlCommand cmd = new SqlCommand("SELECT * FROM restaurant_schema.MEALS WHERE (ID = '" + textBox4.Text + "')", con);
                 SqlDataReader reader;
                 reader = cmd.ExecuteReader();
                 while (reader.Read())
@@ -130,6 +131,19 @@ namespace WindowsFormsApp1
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Dashboard back = new Dashboard();
+            back.Show();
+            this.Hide();
         }
     }
 }
