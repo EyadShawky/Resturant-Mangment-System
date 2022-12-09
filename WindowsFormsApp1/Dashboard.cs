@@ -155,6 +155,13 @@ namespace WindowsFormsApp1
             booking.Show();
             this.Hide();
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            Department department = new Department();
+            department.Show();
+            this.Hide();
+        }
     }
 }
 
