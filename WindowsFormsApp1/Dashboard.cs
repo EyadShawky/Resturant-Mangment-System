@@ -162,6 +162,13 @@ namespace WindowsFormsApp1
             department.Show();
             this.Hide();
         }
+
+        private void button2_Click_2(object sender, EventArgs e)
+        {
+            Account account = new Account();
+            account.Show();
+            this.Hide();
+        }
     }
 }
 

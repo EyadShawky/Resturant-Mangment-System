@@ -177,6 +177,7 @@
             this.button2.TabIndex = 19;
             this.button2.Text = "Account";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click_2);
             // 
             // button1
             // 
