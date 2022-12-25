@@ -31,9 +31,9 @@ namespace WindowsFormsApp1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text != "" && textBox2.Text != "" && textBox3.Text != "" && textBox6.Text != "" && textBox4.Text != "")
+            if (textBox1.Text != "" && textBox2.Text != "" && textBox3.Text != "" && textBox6.Text != "" && comboBox1.Text != "")
             {
-                cmd = new SqlCommand("INSERT INTO restaurant_schema.ACCOUNT VAlUES ('" + textBox1.Text + "' , '" + textBox2.Text + "' , '" + textBox3.Text + "' , '" + textBox6.Text + "' , '" + textBox4.Text + "')", conn);
+                cmd = new SqlCommand("INSERT INTO restaurant_schema.ACCOUNT VAlUES ('" + textBox1.Text + "' , '" + textBox2.Text + "' , '" + textBox3.Text + "' , '" + textBox6.Text + "' , '" + comboBox1.Text + "')", conn);
                 conn.Open();
                 cmd.ExecuteNonQuery();
                 conn.Close();
@@ -47,7 +47,7 @@ namespace WindowsFormsApp1
             textBox1.Text = " ";
             textBox2.Text = " ";
             textBox3.Text = " ";
-            textBox4.Text = " ";
+            comboBox1.Text = " ";
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
